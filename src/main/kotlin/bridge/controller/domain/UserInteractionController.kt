@@ -15,4 +15,9 @@ class UserInteractionController(
         outputView.printMsg("다리의 길이를 입력해주세요.")
         return inputView.getInput()
     }
+
+    fun handleUpDown(): String {
+        outputView.printMsg("이동할 칸을 선택해주세요. (위: U, 아래: D)")
+        return inputView.getInput()
+    }
 }
