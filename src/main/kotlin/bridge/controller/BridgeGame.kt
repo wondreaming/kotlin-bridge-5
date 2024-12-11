@@ -1,9 +1,16 @@
-package bridge
+package bridge.controller
+
+import bridge.controller.domain.UserInteractionController
 
 /**
  * 다리 건너기 게임을 관리하는 클래스
  */
-class BridgeGame {
+class BridgeGame (
+  private val userInteractionController: UserInteractionController = UserInteractionController(),
+){
+    fun run() {
+        userInteractionController.handleStartMsg()
+    }
     /**
      * 사용자가 칸을 이동할 때 사용하는 메서드
      *
