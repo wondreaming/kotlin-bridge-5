@@ -1,4 +1,4 @@
-package bridge.controller
+package bridge.model
 
 import bridge.controller.domain.UserInteractionController
 import bridge.controller.validator.BridgeLengthValidator
