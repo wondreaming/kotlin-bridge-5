@@ -10,4 +10,9 @@ class UserInteractionController(
     fun handleStartMsg() {
         outputView.printMsg("다리 건너기 게임을 시작합니다.")
     }
+
+    fun handleBridgeLength(): String {
+        outputView.printMsg("다리의 길이를 입력해주세요.")
+        return inputView.getInput()
+    }
 }
