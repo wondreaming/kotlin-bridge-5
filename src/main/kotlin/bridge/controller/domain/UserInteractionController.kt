@@ -25,4 +25,16 @@ class UserInteractionController(
         outputView.printMsg("게임을 다시 시도할지 여부를 입력해주세요. (재시도: R, 종료: Q)")
         return inputView.getInput()
     }
+
+    fun handleGameRound(up: List<String>, down: List<String>) {
+        outputView.printMsg(up.joinToString(" | ", "[ ", " ]"))
+        outputView.printMsg(down.joinToString(" | ", "[ ", " ]"))
+    }
+
+    fun handleResult(up: List<String>, down: List<String>, success: String, round: Int) {
+        outputView.printMsg("최종 게임 결과")
+        handleGameRound(up, down)
+        println("게임 성공 여부: ${success}")
+        println("총 시도한 횟수: ${round}")
+    }
 }

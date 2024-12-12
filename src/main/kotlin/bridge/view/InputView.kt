@@ -10,7 +10,7 @@ class InputView {
      * 다리의 길이를 입력받는다.
      */
     fun getInput(): String {
-        val userInput = Console.readLine()
+        val userInput = Console.readLine().trim()
         return userInput
     }
 
